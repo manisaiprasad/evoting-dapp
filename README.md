@@ -5,6 +5,8 @@ Blockchain based voting app
 ### Prerequisites 
 - NPM: https://nodejs.org
 - Truffle: https://github.com/trufflesuite/truffle
+
+> `npm install -g truffle`
 - Ganache: http://truffleframework.com/ganache/
 - Metamask: https://metamask.io/
 
