@@ -59,6 +59,7 @@ App = {
 
     loader.show();
     content.hide();
+    $('logout').show();
 
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
@@ -101,6 +102,7 @@ App = {
         $('form').hide();
       }
       loader.hide();
+      $('logout').show();
       content.show();
     }).catch(function(error) {
       console.warn(error);

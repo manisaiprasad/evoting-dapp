@@ -16,12 +16,26 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD8S8A9XZRU3UAvjenDjm-xdBKmn1NOSR0",
+        authDomain: "voting-3eed6.firebaseapp.com",
+        databaseURL: "https://voting-3eed6.firebaseio.com",
+        projectId: "voting-3eed6",
+        storageBucket: "voting-3eed6.appspot.com",
+        messagingSenderId: "376658495838"
+      };
+      firebase.initializeApp(config);
+    </script>
+
   </head>
   <body>
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="text-center" style="background-color:Gold;color:White;">Party Election</h2>
+          <h2 class="text-center" style="background-color:Gold;color:White;">Aadhaar Voting</h2>
           <hr/>
           <br/>
           <div id="loader">
@@ -50,12 +64,25 @@
               <hr />
             </form>
             <p id="accountAddress" class="text-center"></p>
+
+            <button type="submit" id="logout" onclick="signOut()" id class="btn btn-primary">Logout</button>
+
           </div>
         </div>
       </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script>
+      function signOut() {
+  // [START auth_sign_out]
+  document.cookie = "show" +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    window.location='http://localhost:8080/app';
+
+    // An error happened.
+  // [END auth_sign_out]
+}
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
